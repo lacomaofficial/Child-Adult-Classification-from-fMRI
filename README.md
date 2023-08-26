@@ -1,4 +1,4 @@
-# Child-Adult Classification from fMRI 
+# Age Classification on fMRI with Support Vector Machine
 
 ## Project Overview
 

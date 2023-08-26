@@ -1,4 +1,4 @@
-# Child-Adult-Classification-from-fMRI
+# Classifying Children and Adults in Unseen Data from Resting State fMRI
 
 
 ### Data Preprocessing

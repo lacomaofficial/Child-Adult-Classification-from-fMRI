@@ -1,4 +1,4 @@
-# Resting State fMRI Classification Project
+# Child-Adult Classification from fMRI 
 
 ## Project Overview
 

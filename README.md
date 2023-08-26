@@ -1,21 +1,40 @@
-# Classifying Children and Adults in Unseen Data from Resting State fMRI
+# Resting State fMRI Classification Project
 
+## Project Overview
 
-### Data Preprocessing
+This project aims to classify individuals as children or adults based on resting-state fMRI (functional Magnetic Resonance Imaging) signal patterns using a Support Vector Classifier (SVC). The dataset includes individuals across a wide age range, from children (ages 3-13) to young adults (ages 18-39).
 
-- Data preprocessing involved the transformation of the dataset, resulting in the creation of two classes: 'adult' and 'child'.
+## Project Structure
 
-### Model Training and Testing
+The project code is organized into several sections, each serving a specific purpose:
 
-- The model was trained on 124 samples and tested on 31 samples.
-- After extensive hyperparameter tuning, the best SVM model achieved an accuracy of approximately 93.55% on the test data.
+1. **Importing Necessary Libraries**: Importing the required Python libraries for data manipulation, visualization, and machine learning.
 
-### Conclusion
+2. **Data Exploration**:
+   - Loading and inspecting the dataset.
+   - Checking for duplicate entries, data types, and missing values.
+   - Exploring the target variable, which is whether an individual is a child or an adult.
 
-In this project, we aimed to predict age groups ('adult' or 'child') based on resting state fMRI data. After thorough data preprocessing and model training, our Support Vector Machine (SVM) classifier demonstrated impressive performance. With an accuracy of approximately 93.55% on the test data, the model successfully distinguished between adults and children based on fMRI patterns.
+3. **Feature Extraction with Nilearn Masker**:
+   - Loading an atlas for defining regions of interest (ROIs).
+   - Initializing a masker to extract features from fMRI data.
+   - Calculating connectivity features using correlation measures for each subject.
 
-These results suggest that resting state fMRI data can be a valuable resource for age prediction. Further research and applications in this domain could have significant implications for understanding brain development and age-related changes in neural activity.
+4. **Data Preparation for Machine Learning**:
+   - Mapping class labels (child/adult) to numerical labels (0/1).
+   - Splitting the dataset into training and testing sets, ensuring class balance using SMOTE (Synthetic Minority Over-sampling Technique).
 
-![output](https://github.com/lacomaofficial/Child-Adult-Classification-from-fMRI/assets/132283879/ef570a0b-5fdf-4cd3-98c6-a836aeb6aa1c)
+5. **Model Building and Evaluation**:
+   - Building an SVC model with hyperparameter tuning using GridSearchCV.
+   - Training the model on the resampled training data.
+   - Making predictions on the test set.
+   - Evaluating the model's performance using accuracy and generating a classification report.
+   - Visualizing the confusion matrix.
 
+6. **Interpreting Model Feature Importance**:
+   - Extracting the coefficients (weights) of the linear SVM model.
+   - Visualizing feature importances.
+   - Plotting the connectome map to explore which regions contribute to classification.
+
+![output](https://github.com/lacomaofficial/Child-Adult-Classification-from-fMRI/assets/132283879/2a0534eb-3025-4057-bec6-c72cd235d975)
 

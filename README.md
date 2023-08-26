@@ -1,4 +1,4 @@
-# Age Classification on resting-state fMRI 
+# Age Classification Model from fMRI 
 
 ## Project Overview
 

@@ -1,4 +1,4 @@
-# Age Classification on fMRI with Support Vector Machine
+# Age Classification on resting-state fMRI 
 
 ## Project Overview
 
